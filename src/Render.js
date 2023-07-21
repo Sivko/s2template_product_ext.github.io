@@ -9,6 +9,24 @@ export default function Render({ setRender, productsId, productsData, setProduct
   const [error, setError] = useState([]);
 
   useEffect(() => {
+    /* to PDF */
+    function addScript(src) {
+      var script = document.createElement('script');
+      script.src = src;
+      script.async = false;
+      document.head.appendChild(script);
+    }
+    addScript('https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js');
+    document.getElementById('print').addEventListener('click', print)
+    function print() {
+      // eslint-disable-next-line no-undef
+      html2pdf()
+        .from(document.getElementById('document'))
+        .save();
+    }
+
+    /* End to PDF */
+
     setError([])
     setProductsData([])
     const fetching = (async () => {
@@ -16,12 +34,13 @@ export default function Render({ setRender, productsId, productsData, setProduct
       setProductsData(prev => [...prev, res])
     })
     fetching()
-  }, [])
+  }, []);
+
 
   return <>
     <div className="instruments">
       <div onClick={() => setRender(false)}>Назад</div>
-      <div onClick={() => window.print()}>Распечатать</div>
+      <div id="print">Распечатать</div>
     </div >
     <div id="errors">
       {error.length && <div style={{ color: 'red', margin: '20px 0 10px' }}>Ошибки: </div>}
@@ -34,11 +53,11 @@ export default function Render({ setRender, productsId, productsData, setProduct
       </>))}
     </div>
     <div id="document">
-      {productsData.map(e=> (<>
-        название: {e.data.dataname} 
-        </>
+      {productsData.map(e => (<>
+        название: {e.data.dataname}
+      </>
       ))}
-        {JSON.stringify(productsData)}
+      {JSON.stringify(productsData)}
     </div>
   </>
 }
