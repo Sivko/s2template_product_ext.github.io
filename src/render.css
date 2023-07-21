@@ -6,7 +6,8 @@
 
 .instruments>div {
   padding: 10px;
-  border: solid 1px #ddd;
+  background-color: #015692;
+  color: #fff;
   min-width: 100px;
   text-align: center;
   cursor: pointer;
@@ -14,15 +15,23 @@
 
 table, th, td {
   border-collapse: collapse;
-  border: 1px solid black;
+  border: 1px solid #1e1e1e;
   width: 100%;
   text-align: right;
-  color: #fff;
+  color: #1e1e1e;
+  font-size: 11px;
 }
 
-@media print {
-  /* здесь будут стили для печати */
-  .container {
-    max-width: 100%;
-  }
+table td:first-child {
+  text-align: left;
+  width: 50%;
+}
+
+table td:last-child {
+  text-align: right;
+}
+
+table.tableFooter td {
+  width: 25%;
+  text-align: center;
 }
