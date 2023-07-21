@@ -1,0 +1,28 @@
+.instruments {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.instruments>div {
+  padding: 10px;
+  border: solid 1px #ddd;
+  min-width: 100px;
+  text-align: center;
+  cursor: pointer;
+}
+
+table, th, td {
+  border-collapse: collapse;
+  border: 1px solid black;
+  width: 100%;
+  text-align: right;
+  color: #fff;
+}
+
+@media print {
+  /* здесь будут стили для печати */
+  .container {
+    max-width: 100%;
+  }
+}
