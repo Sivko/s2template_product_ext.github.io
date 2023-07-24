@@ -78,11 +78,11 @@ export default function Render({ setRender, productsId, productsData, setProduct
             <tbody>
               <tr>
                 <td>Дата запуска</td>
-                <td>{moment(product?.attributes?.customs?.custom_83033)?.format('DD MM YYYY')}</td>
+                <td>{moment(product?.attributes?.customs['custom-83033'])?.format('DD MMMM YYYY')}</td>
               </tr>
               <tr>
                 <td>Дата отгр. ПЛАН</td>
-                <td>{moment(product?.attributes?.customs?.custom_83036)?.format('DD MM YYYY')}</td>
+                <td>{moment(product?.attributes?.customs['custom-83036'])?.format('DD MMMM YYYY')}</td>
               </tr>
               <tr>
                 <td>Название</td>
@@ -90,7 +90,7 @@ export default function Render({ setRender, productsId, productsData, setProduct
               </tr>
               <tr>
                 <td>Описание</td>
-                <td>{product?.attributes?.description}</td>
+                <td>{product?.attributes?.description ? product?.attributes?.description.replace(/<\/?[^>]+(>|$)/g, "") : ''}</td>
               </tr>
               <tr>
                 <td>Кол-во</td>
@@ -102,7 +102,7 @@ export default function Render({ setRender, productsId, productsData, setProduct
               </tr>
               <tr>
                 <td>Заметка для производства</td>
-                <td>{product?.attributes?.customs?.custom_117097}</td>
+                <td>{product?.attributes?.customs['custom-117097']}</td>
               </tr>
               <tr>
                 <td>Объект</td>
@@ -114,23 +114,23 @@ export default function Render({ setRender, productsId, productsData, setProduct
               </tr>
               <tr>
                 <td>К-1: &nbsp; основ-1 | BR-профиль</td>
-                <td>{product?.attributes?.customs?.custom_108662}</td>
+                <td>{product?.attributes?.customs['custom-108662']}</td>
               </tr>
               <tr>
                 <td>К-2: &nbsp; основ-2 | BR-загл</td>
-                <td>{product?.attributes?.customs?.custom_108663}</td>
+                <td>{product?.attributes?.customs['custom-108663']}</td>
               </tr>
               <tr>
                 <td>К-3: &nbsp; Фил SHTA | BR-панель</td>
-                <td>{product?.attributes?.customs?.custom_108665}</td>
+                <td>{product?.attributes?.customs['custom-108665']}</td>
               </tr>
               <tr>
                 <td>К-4: &nbsp; Трубки | BR-стекло</td>
-                <td>{product?.attributes?.customs?.custom_111884}</td>
+                <td>{product?.attributes?.customs['custom-111884']}</td>
               </tr>
               <tr>
                 <td>К-5: &nbsp; Разное; BR-стойка</td>
-                <td>{product?.attributes?.customs?.custom_111885}</td>
+                <td>{product?.attributes?.customs['custom-111885']}</td>
               </tr>
               <tr>
                 <td><br /></td>
@@ -138,47 +138,47 @@ export default function Render({ setRender, productsId, productsData, setProduct
               </tr>
               <tr>
                 <td>СТ-01: &nbsp; Корпуса прямоугольные</td>
-                <td>{product?.attributes?.customs?.custom_108664}</td>
+                <td>{product?.attributes?.customs['custom-108664']}</td>
               </tr>
               <tr>
                 <td>СТ-02: &nbsp; Корпуса приборов</td>
-                <td>{product?.attributes?.customs?.custom_112328}</td>
+                <td>{product?.attributes?.customs['custom-112328']}</td>
               </tr>
               <tr>
                 <td>СТ-03: &nbsp; Аморт. BORE</td>
-                <td>{product?.attributes?.customs?.custom_114316}</td>
+                <td>{product?.attributes?.customs['custom-114316']}</td>
               </tr>
               <tr>
                 <td>СТ-04: &nbsp; BORE стойка</td>
-                <td>{product?.attributes?.customs?.custom_114317}</td>
+                <td>{product?.attributes?.customs['custom-114317']}</td>
               </tr>
               <tr>
                 <td>СТ-05: &nbsp; BR-Кронштейны</td>
-                <td>{product?.attributes?.customs?.custom_114318}</td>
+                <td>{product?.attributes?.customs['custom-114318']}</td>
               </tr>
               <tr>
                 <td>СТ-06: &nbsp; Переходники резьбы</td>
-                <td>{product?.attributes?.customs?.custom_114319}</td>
+                <td>{product?.attributes?.customs['custom-114319']}</td>
               </tr>
               <tr>
                 <td>СТ-07: &nbsp; Болт М6х10</td>
-                <td>{product?.attributes?.customs?.custom_114320}</td>
+                <td>{product?.attributes?.customs['custom-114320']}</td>
               </tr>
               <tr>
                 <td>СТ-08: &nbsp; Болт М6х16</td>
-                <td>{product?.attributes?.customs?.custom_114321}</td>
+                <td>{product?.attributes?.customs['custom-114321']}</td>
               </tr>
               <tr>
                 <td>СТ-09: &nbsp; Винты все</td>
-                <td>{product?.attributes?.customs?.custom_114322}</td>
+                <td>{product?.attributes?.customs['custom-114322']}</td>
               </tr>
               <tr>
                 <td>СТ-10: &nbsp; Гайки | Шайбы</td>
-                <td>{product?.attributes?.customs?.custom_114323}</td>
+                <td>{product?.attributes?.customs['custom-114323']}</td>
               </tr>
               <tr>
                 <td>СТ-11: &nbsp; Другое</td>
-                <td>{product?.attributes?.customs?.custom_114324}</td>
+                <td>{product?.attributes?.customs['custom-114324']}</td>
               </tr>
               <tr>
                 <td><br /></td>
@@ -186,23 +186,23 @@ export default function Render({ setRender, productsId, productsData, setProduct
               </tr>
               <tr>
                 <td>ПУ-1: &nbsp; ГЛАВН</td>
-                <td>{product?.attributes?.customs?.custom_114325}</td>
+                <td>{product?.attributes?.customs['custom-114325']}</td>
               </tr>
               <tr>
                 <td>ПУ-2: &nbsp; SENS HT | ПУ SENS-18V | ПУ BOR</td>
-                <td>{product?.attributes?.customs?.custom_114326}</td>
+                <td>{product?.attributes?.customs['custom-114326']}</td>
               </tr>
               <tr>
                 <td>ПУ-3: &nbsp; SENS TC | ПУ SENS-30V | ПУ BOT</td>
-                <td>{product?.attributes?.customs?.custom_114327}</td>
+                <td>{product?.attributes?.customs['custom-114327']}</td>
               </tr>
               <tr>
                 <td>ПУ-4: &nbsp; П/П BOTE</td>
-                <td>{product?.attributes?.customs?.custom_114328}</td>
+                <td>{product?.attributes?.customs['custom-114328']}</td>
               </tr>
               <tr>
                 <td>ПУ-5: &nbsp; П/П BORE</td>
-                <td>{product?.attributes?.customs?.custom_114329}</td>
+                <td>{product?.attributes?.customs['custom-114329']}</td>
               </tr>
               <tr>
                 <td><br /></td>
@@ -210,55 +210,55 @@ export default function Render({ setRender, productsId, productsData, setProduct
               </tr>
               <tr>
                 <td>ЭЛ-01: &nbsp; Сенсор</td>
-                <td>{product?.attributes?.customs?.custom_114330}</td>
+                <td>{product?.attributes?.customs['custom-114330']}</td>
               </tr>
               <tr>
                 <td>ЭЛ-02: &nbsp; Кабель 2-3-пров</td>
-                <td>{product?.attributes?.customs?.custom_114331}</td>
+                <td>{product?.attributes?.customs['custom-114331']}</td>
               </tr>
               <tr>
                 <td>ЭЛ-03: &nbsp; Кабель 4-5-пров</td>
-                <td>{product?.attributes?.customs?.custom_114332}</td>
+                <td>{product?.attributes?.customs['custom-114332']}</td>
               </tr>
               <tr>
                 <td>ЭЛ-04: &nbsp; Гермоввод М12 | Втулка кабеля</td>
-                <td>{product?.attributes?.customs?.custom_114333}</td>
+                <td>{product?.attributes?.customs['custom-114333']}</td>
               </tr>
               <tr>
                 <td>ЭЛ-05: &nbsp; Гермоввод М16</td>
-                <td>{product?.attributes?.customs?.custom_114334}</td>
+                <td>{product?.attributes?.customs['custom-114334']}</td>
               </tr>
               <tr>
                 <td>ЭЛ-06: &nbsp; Разъёмы</td>
-                <td>{product?.attributes?.customs?.custom_114335}</td>
+                <td>{product?.attributes?.customs['custom-114335']}</td>
               </tr>
               <tr>
                 <td>ЭЛ-07: &nbsp; Разъём ряд PLS</td>
-                <td>{product?.attributes?.customs?.custom_114336}</td>
+                <td>{product?.attributes?.customs['custom-114336']}</td>
               </tr>
               <tr>
                 <td>ЭЛ-08: &nbsp; Светодиод</td>
-                <td>{product?.attributes?.customs?.custom_114337}</td>
+                <td>{product?.attributes?.customs['custom-114337']}</td>
               </tr>
               <tr>
                 <td>ЭЛ-09: &nbsp; R-подстр-1 |Клеммы</td>
-                <td>{product?.attributes?.customs?.custom_114338}</td>
+                <td>{product?.attributes?.customs['custom-114338']}</td>
               </tr>
               <tr>
                 <td>ЭЛ-10: &nbsp; R-подстр-2 | Геркон СО2</td>
-                <td>{product?.attributes?.customs?.custom_114339}</td>
+                <td>{product?.attributes?.customs['custom-114339']}</td>
               </tr>
               <tr>
                 <td>ЭЛ-11: &nbsp; Диод | Реле</td>
-                <td>{product?.attributes?.customs?.custom_114340}</td>
+                <td>{product?.attributes?.customs['custom-114340']}</td>
               </tr>
               <tr>
                 <td>ЭЛ-12: &nbsp; Конденсатор CC</td>
-                <td>{product?.attributes?.customs?.custom_114341}</td>
+                <td>{product?.attributes?.customs['custom-114341']}</td>
               </tr>
               <tr>
                 <td>ЭЛ-13: &nbsp; Резистор RC</td>
-                <td>{product?.attributes?.customs?.custom_114342}</td>
+                <td>{product?.attributes?.customs['custom-114342']}</td>
               </tr>
               <tr>
                 <td>ID</td>
