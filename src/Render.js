@@ -295,7 +295,7 @@ export default function Render({ setRender, productsId, productsData, setProduct
                 </td>
               </tr>
               <tr>
-                <td>
+                <td style={{ textAlign: 'left' }}>
                   {product?.attributes?.customs['custom-116877']}
                 </td>
                 <td>
@@ -308,7 +308,7 @@ export default function Render({ setRender, productsId, productsData, setProduct
                 </td>
               </tr>
               <tr>
-                <td>
+                <td style={{ textAlign: 'left' }}>
                   {product?.attributes?.customs['custom-116878']}
                 </td>
                 <td>
@@ -322,7 +322,7 @@ export default function Render({ setRender, productsId, productsData, setProduct
                 </td>
               </tr>
               <tr>
-                <td>
+                <td style={{ textAlign: 'left' }}>
                   {product?.attributes?.customs['custom-116879']}                </td>
                 <td>
                   <br />
@@ -335,7 +335,7 @@ export default function Render({ setRender, productsId, productsData, setProduct
                 </td>
               </tr>
               <tr>
-                <td>
+                <td style={{ textAlign: 'left' }}>
                   {product?.attributes?.customs['custom-116880']}                </td>
                 <td>
                   <br />
@@ -348,7 +348,7 @@ export default function Render({ setRender, productsId, productsData, setProduct
                 </td>
               </tr>
               <tr>
-                <td>
+                <td style={{ textAlign: 'left' }}>
                   {product?.attributes?.customs['custom-116881']}                </td>
                 <td>
                   <br />
@@ -361,7 +361,7 @@ export default function Render({ setRender, productsId, productsData, setProduct
                 </td>
               </tr>
               <tr>
-                <td>
+                <td style={{ textAlign: 'left' }}>
                   {product?.attributes?.customs['custom-116882']}                </td>
                 <td>
                   <br />
@@ -374,7 +374,7 @@ export default function Render({ setRender, productsId, productsData, setProduct
                 </td>
               </tr>
               <tr>
-                <td>
+                <td style={{ textAlign: 'left' }}>
                   {product?.attributes?.customs['custom-116883']}                </td>
                 <td>
                   <br />
