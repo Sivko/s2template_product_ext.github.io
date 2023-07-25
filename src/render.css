@@ -35,3 +35,53 @@ table.tableFooter td {
   width: 25%;
   text-align: center;
 }
+
+td, th{
+  border:  #648ace solid 1px;
+  
+}
+
+td {
+  width: 60%;
+}
+
+.col{
+  width: 40%;
+  text-align: right;
+}
+
+.col2{
+  text-align: left;
+}
+
+.col1{
+  text-align: center;
+}
+
+.none{
+  border: none;
+}
+.table_one {
+  border:  #648ace solid 3px;
+}
+
+.table_two {
+  background-color: #ffe699 ;
+  border:  #648ace solid 3px;
+
+}
+
+.table_three{
+  background-color: #bfbfbf;
+  border:  #648ace solid 3px;;
+}
+
+.table_four{
+  background-color: #b4c6e7;
+  border:  #648ace solid 3px;;
+}
+
+.table_five{
+  background-color: #c6e0b4;
+  border:  #648ace solid 3px;;
+}
