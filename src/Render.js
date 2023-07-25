@@ -86,15 +86,15 @@ export default function Render({ setRender, productsId, productsData, setProduct
               </tr>
               <tr>
                 <td><b>Название </b></td>
-                <td class="col2"><b>{product?.attributes?.name} </b></td>
+                <td class="col" style={{ textAlign: 'left' }}><b>{product?.attributes?.name} </b></td>
               </tr>
               <tr>
                 <td>Описание</td>
-                <td class="col2">{product?.attributes?.description ? product?.attributes?.description.replace(/<\/?[^>]+(>|$)/g, "") : ''}</td>
+                <td class="col" style={{ textAlign: 'left' }}>{product?.attributes?.description ? product?.attributes?.description.replace(/<\/?[^>]+(>|$)/g, "") : ''}</td>
               </tr>
               <tr>
                 <td>Кол-во</td>
-                <td class="col1">{product?.attributes?.quantity}</td>
+                <td class="col" style={{ textAlign: 'center' }}>{product?.attributes?.quantity.split('.')[0]}</td>
               </tr>
             </tbody>
           </table>
@@ -103,15 +103,15 @@ export default function Render({ setRender, productsId, productsData, setProduct
             <tbody>
               <tr>
                 <td class="none">Статус</td>
-                <td class="col2 none">{product?.attributes?.status}</td>
+                <td class="col none" style={{ textAlign: 'left' }}>{product?.attributes?.status}</td>
               </tr>
               <tr>
                 <td class="none">Заметка для производства</td>
-                <td class="col2 none">{product?.attributes?.customs['custom-117097']}</td>
+                <td class="col none" style={{ textAlign: 'left' }}>{product?.attributes?.customs['custom-117097'] ? product?.attributes?.customs['custom-117097'].replace(/<\/?[^>]+(>|$)/g, "") : ''}</td>
               </tr>
               <tr>
                 <td class="none">Объект</td>
-                <td class="col2 none">{deal?.attributes?.name} №{deal?.attributes?.number}</td>
+                <td class="col none" style={{ textAlign: 'left' }}>{deal?.attributes?.name} №{deal?.attributes?.number}</td>
               </tr>
             </tbody>
           </table>
@@ -120,23 +120,23 @@ export default function Render({ setRender, productsId, productsData, setProduct
             <tbody>
               <tr>
                 <td>К-1: &nbsp; основ-1 | BR-профиль</td>
-                <td class="col2">{product?.attributes?.customs['custom-108662']}</td>
+                <td class="col" style={{ textAlign: 'left' }}>{product?.attributes?.customs['custom-108662']}</td>
               </tr>
               <tr>
                 <td>К-2: &nbsp; основ-2 | BR-загл</td>
-                <td class="col2">{product?.attributes?.customs['custom-108663']}</td>
+                <td class="col" style={{ textAlign: 'left' }}>{product?.attributes?.customs['custom-108663']}</td>
               </tr>
               <tr>
                 <td>К-3: &nbsp; Фил SHTA | BR-панель</td>
-                <td class="col2">{product?.attributes?.customs['custom-108665']}</td>
+                <td class="col" style={{ textAlign: 'left' }}>{product?.attributes?.customs['custom-108665']}</td>
               </tr>
               <tr>
                 <td>К-4: &nbsp; Трубки | BR-стекло</td>
-                <td class="col2">{product?.attributes?.customs['custom-111884']}</td>
+                <td class="col" style={{ textAlign: 'left' }}>{product?.attributes?.customs['custom-111884']}</td>
               </tr>
               <tr>
                 <td>К-5: &nbsp; Разное; BR-стойка</td>
-                <td class="col2">{product?.attributes?.customs['custom-111885']}</td>
+                <td class="col" style={{ textAlign: 'left' }}>{product?.attributes?.customs['custom-111885']}</td>
               </tr>
             </tbody>
           </table>
@@ -146,11 +146,11 @@ export default function Render({ setRender, productsId, productsData, setProduct
 
               <tr>
                 <td>СТ-01: &nbsp; Корпуса прямоугольные</td>
-                <td class="col2">{product?.attributes?.customs['custom-108664']}</td>
+                <td class="col" style={{ textAlign: 'left' }}>{product?.attributes?.customs['custom-108664']}</td>
               </tr>
               <tr>
                 <td>СТ-02: &nbsp; Корпуса приборов</td>
-                <td class="col2">{product?.attributes?.customs['custom-112328']}</td>
+                <td class="col" style={{ textAlign: 'left' }}>{product?.attributes?.customs['custom-112328']}</td>
               </tr>
               <tr>
                 <td>СТ-03: &nbsp; Аморт. BORE</td>
@@ -272,20 +272,14 @@ export default function Render({ setRender, productsId, productsData, setProduct
               </tr>
             </tbody>
           </table>
-
-
-          <br />
-          <table>
+          <table style={{ border: 'none' }}>
             <tbody>
-
-              <tr>
-                <td>ID</td>
-                <td class="col">{product.id}</td>
+              <tr style={{ border: 'none' }}>
+                <td style={{ border: 'none' }}>ID</td>
+                <td class="col" style={{ border: 'none' }}>{product.id}</td>
               </tr>
             </tbody>
           </table>
-
-          <br />
           <table className='tableFooter html2pdf__page-break'>
             <tbody>
               <tr>
