@@ -24,7 +24,8 @@ function App() {
   return (
     <div className="App">
       <div className='container'>
-        {render === false && (
+        <h1>Access denied</h1>
+        {/* {render === false && (
           <>
             <header className="App-header">
               <p>
@@ -39,7 +40,7 @@ function App() {
             </main>
           </>
         )}
-        {render && <Render productsId={productsId} productsData={productsData}  setProductsData={setProductsData} setRender={setRender} />}
+        {render && <Render productsId={productsId} productsData={productsData}  setProductsData={setProductsData} setRender={setRender} />} */}
       </div>
     </div >
   );
